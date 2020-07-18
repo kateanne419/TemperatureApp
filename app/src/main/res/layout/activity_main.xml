@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@drawable/bg"
+tools:context=".MainActivity">
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_marginTop="35dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textdashboard"
+            android:text="Dashboard"
+            android:textSize="24sp"
+            android:textColor="#FFFFFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_marginTop="6dp"
+            android:layout_below="@id/textdashboard"
+            android:text="Good day, user!"
+            android:textSize="14sp"
+            android:textColor="#52BAFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_marginTop="35dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="0"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="12dp"
+            android:foregroundGravity="center"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="9dp"
+            app:cardBackgroundColor="#FFFFFF">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <RelativeLayout
+                    android:layout_width="300dp"
+                    android:layout_height="180dp">
+
+                    <pl.pawelkleczkowski.customgauge.CustomGauge
+                        android:id="@+id/tempgauge"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        app:gaugeEndValue="50"
+                        app:gaugePointEndColor="#3A29D6"
+                        app:gaugePointStartColor="#7EC6E6"
+                        app:gaugeStartAngle="135"
+                        app:gaugeStartValue="0"
+                        app:gaugeStrokeCap="ROUND"
+                        app:gaugeStrokeColor="#D6D6D6"
+                        app:gaugeStrokeWidth="12dp"
+                        app:gaugeSweepAngle="270" />
+
+                    <TextView
+                        android:id="@+id/temperatureval"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:text="00"
+                        android:textSize="60sp"
+                        android:textStyle="bold"
+                        android:textColor="#274473"/>
+
+                    <TextView
+                        android:id="@+id/tempstartend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/temperatureval"
+                        android:layout_centerHorizontal="true"
+                        android:text="00                                50"
+                        android:textSize="12sp"
+                        android:textColor="#6f6f6f"/>
+
+                    <TextView
+                        android:id="@+id/tempunit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tempstartend"
+                        android:layout_centerHorizontal="true"
+                        android:text="°C"
+                        android:textColor="#6f6f6f"
+                        android:textSize="25sp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Body Temperature"
+                    android:textColor="#6f6f6f"
+                    android:textSize="22sp" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <Button
+
+            android:id="@+id/gettemp"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#68AFCF"
+            android:text="get temp" />
+        <TextView
+            android:layout_marginTop="50dp"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tap the button to get your temperature!"
+            android:textColor="#274473"/>
+
+    </LinearLayout>
+</LinearLayout>
+
+</ScrollView>
