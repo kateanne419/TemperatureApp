@@ -131,31 +131,33 @@ tools:context=".MainActivity">
         </androidx.cardview.widget.CardView>
     </RelativeLayout>
     <LinearLayout
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center">
 
         <Button
-
-            android:id="@+id/gettemp"
+            android:id="@+id/connect"
             android:layout_width="100dp"
             android:layout_height="60dp"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:backgroundTint="#68AFCF"
-            android:text="get temp" />
-        <TextView
-            android:layout_marginTop="50dp"
-            android:textSize="20sp"
-            android:layout_gravity="center"
-            android:id="@+id/status"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Tap the button to get your temperature!"
-            android:textColor="#274473"/>
+            android:text="Get temp" />
+
 
     </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="50dp"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="Please connect your thermometer then tap the button."
+        android:textColor="#274473"/>
 </LinearLayout>
 
 </ScrollView>
